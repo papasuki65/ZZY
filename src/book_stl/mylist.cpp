@@ -113,6 +113,15 @@ class List{
        long _size; 
 };
 
+template<class ListIter, class T>
+ListIter find(ListIter first, ListIter end, const T value)
+{
+    while(first != end && *first != value){
+        first++;
+    }
+    return first;
+}
+
 int main()
 {
     List<int> li;
@@ -122,11 +131,14 @@ int main()
         li.insert_end(i + 2);
     }
     li.display();
-    cout <<"-----\n\n";
+    cout <<"---------\n\n";
     ListIter<ListItem<int>> iter(li.front());
     do{
         cout << *iter << endl;
     }while(iter++ != li.end());
 
+    auto it = find(li.front(), ++li.end(), 6);
+    cout <<"----------\n\n";
+    cout << *it << endl;
     return 0;
 }
