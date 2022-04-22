@@ -2,10 +2,13 @@
 
 using namespace std;
 
+/*
+* 每个新设计ID迭代器都可以继承自std::iterator<std::forward_iterator_tag, T>
+* 这里因为迭代器没有实现在容器内部，所以继承在了元素项上
+*/
 template <typename T>
-class ListItem{
+class ListItem : public std::iterator<std::forward_iterator_tag, T>{
     public:
-    typedef T value_type;
     ListItem(T value): _value(value){}
         T value(){return _value;}
         ListItem *next() const{
