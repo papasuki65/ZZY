@@ -19,8 +19,10 @@ template <typename T> struct Identity<T&&> {
     typedef T type;
 
 };
-
-
+/* 
+ *  正常来说此版本已满足完美转发要求，因为转发的话，t已经是一个具名的变量，不可能再是右值，
+ *  下面增加其右值引用版本是对用户使用Forward<T>(move(t))情况的补充。
+ */
 template <typename T> T&& Forward(typename Identity<T>::type& t) {
 
     return static_cast<T&&>(t);
