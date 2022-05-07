@@ -1,6 +1,0 @@
-1.  C++头文件路径 /usr/include/5/c++
-    C++stl实现路径 /usr/include/5/c++/bits
-
-2.  make_shared构造后返回一个shared_ptr指针，之后调用shared_ptr的移动拷贝构造
-    直接使用shared_ptr参数构造时，先生成一个临时变量，之后在shared_ptr构造里需要调用放入指针的class类型支持移动拷贝语义，否则会调用其拷贝构造。
-    

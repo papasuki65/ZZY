@@ -1,0 +1,18 @@
+book list:
+    STL source code
+    CCIA
+    SPEC
+    BPF
+    DDIA
+    存储技术原理分析
+
+
+direction：
+    项目开发
+    分布式：一致性算法
+    redis数据库
+    算法
+    开源库学习（moduo、redis）
+    多线程、大规模并发、协程
+    zookeeper 分布式锁
+    调试技术
