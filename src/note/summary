@@ -22,3 +22,9 @@
 5.  clang -Xclang -fdump-record-layouts -stdlib=libc++ -std=c++11 -c oop.cc     //查看对象布局
     clang -Xclang -fdump-vtable-layouts -stdlib=libc++ -std=c++11 -c oop.cc     //查看虚函数布局
 
+
+    innoDB源码分析:     https://www.cnblogs.com/wingsless/p/5571292.html
+    LRU缓存命中率建模:  https://zhuanlan.zhihu.com/p/98144430
+
+    逻辑时钟 - 如何刻画分布式中的事件顺序:  https://writings.sh/post/logical-clocks
+
