@@ -61,6 +61,8 @@ int main() {
 
     const int b = 2;
 
+    int& c = a;
+
     cout << "Directly calling inner()." << endl;
 
     inner(a);
@@ -68,6 +70,8 @@ int main() {
     inner(b);
 
     inner(3);
+
+    inner(c);
 
     cout << endl << "Calling outer()." << endl;
 
